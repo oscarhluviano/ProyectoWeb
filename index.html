@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>PROTECO</title>
+		<link rel="shortcut icon" type="image/png" href="http://proteco.mx/favicon.ico"/>
 		<link rel="stylesheet" href="css/materialize.css">
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,31 +12,45 @@
 	</head>
 	<body>
 		<!--Barra de navegacion-->
+		<header>
+			<ul id="dropdown1" class="dropdown-content">
+				<li><a href="#!">Inicia sesión</a></li>
+				<li><a href="#!">Registrate</a></li>
+			</ul>
+			<nav>
+				<div class="nav-wrapper blue darken-4">
+					<div class="nav-wrapper container">
+						<a href="#!" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
+						<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+						<ul class="right hide-on-med-and-down">
+							<li><a href="index.html">Cursos</a></li>
+							<li><a href="convocatoria.html">Convocatoria</a></li>
+							<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ingresar<i class="material-icons right">down</i></a></li>
+						</ul>
+						<ul class="side-nav" id="mobile-demo">
+							<li><a href="cursos.html">Cursos</a></li>
+							<li><a href="convocatoria.html">Convocatoria</a></li>
+							<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ingresar<i class="material-icons right">arrow_drop_down</i></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 		<main>
-		<ul id="dropdown1" class="dropdown-content">
-			<li><a href="#!">Inicia sesión</a></li>
-			<li><a href="#!">Registrate</a></li>
-		</ul>
-		<nav>
-			<div class="nav-wrapper blue darken-4">
-				<div class="container">
-					<a href="#!" class="brand-logo"><img src="http://proteco.mx/img/tipo.png"></a>
-					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-					<ul class="right hide-on-med-and-down">
-						<li><a href="index.html">Cursos</a></li>
-						<li><a href="convocatoria.html">Convocatoria</a></li>
-						<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ingresar<i class="material-icons right">down</i></a></li>
-					</ul>
-					<ul class="side-nav" id="mobile-demo">
-						<li><a href="cursos.html">Cursos</a></li>
-						<li><a href="convocatoria.html">Convocatoria</a></li>
-						<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Ingresar<i class="material-icons right">arrow_drop_down</i></a></li>
-					</ul>
+		<div class="container">
+		<div>
+		<span class="title">Cursos intersemestrales</span>
+		</div>
+		<div class="center">
+			<span class="title">Buscar</span>
+			<div class="container">
+				<div class="input-field">
+					<input id="courseSearch" placeholder="Nombre del curso" data-id="courseSearch" type="text">
 				</div>
 			</div>
-		</nav>
+		</div>
+		</div>
 		</main>
-		<h1>CURSOS INTERSEMESTRALES</h1>
 		<!--footer-->
 		<footer class="page-footer  grey lighten-2">
 			<div class="container">
