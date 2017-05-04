@@ -15,5 +15,19 @@ p{
 }
 .title{
 	font-size: 24px;
-	color: 
-}e
+	color:#3f51b5; 
+	text-transform: uppercase;
+}
+.card-title{
+	color: #3f51b5;
+}
+
+.carousel .carousel-item>img {
+    width: 70%;
+}
+
+.timeline-Body {
+    position: relative;
+    border-top: 1px solid rgba(15,70,100,.12);
+    border-bottom: 1px solid rgba(15,70,100,.12);
+}
