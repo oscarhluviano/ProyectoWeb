@@ -2,12 +2,14 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: #eeeeee;
+    background-color: #fafafa;
   }
 
   main {
     flex: 1 0 auto;
   }
+
+
 
 
 
