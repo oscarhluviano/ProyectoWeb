@@ -4,6 +4,7 @@ $(document).ready(function(){
   $('.carousel.carousel-slider').carousel({fullWidth: true});
   window.setInterval(function(){$('.carousel').carousel('next')},6000);
   $('.parallax').parallax();
+   $('.modal').modal();
   });
 
 twttr.widgets.createTimeline(
