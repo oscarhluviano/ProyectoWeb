@@ -2,7 +2,7 @@ $(document).ready(function(){
   $(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
   $('.carousel.carousel-slider').carousel({fullWidth: true});
-  window.setInterval(function(){$('.carousel').carousel('next')},6000);
+  window.setInterval(function(){$('.carousel').carousel('next')},5000);
   $('.parallax').parallax();
    $('.modal').modal();
   });
@@ -22,3 +22,4 @@ twttr.widgets.createTimeline(
 	js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=820277861463329";
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
+
