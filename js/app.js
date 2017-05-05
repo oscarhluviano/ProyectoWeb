@@ -2,7 +2,8 @@ $(document).ready(function(){
   $(".button-collapse").sideNav();
   $(".dropdown-button").dropdown();
   $('.carousel.carousel-slider').carousel({fullWidth: true});
-  window.setInterval(function(){$('.carousel').carousel('next')},6000)
+  window.setInterval(function(){$('.carousel').carousel('next')},6000);
+  $('.parallax').parallax();
   });
 
 twttr.widgets.createTimeline(

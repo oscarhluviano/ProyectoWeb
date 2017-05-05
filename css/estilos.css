@@ -20,14 +20,14 @@ p{
 }
 .card-title{
 	color: #3f51b5;
+	text-transform: uppercase;
 }
 
 .carousel .carousel-item>img {
     width: 70%;
 }
-
-.timeline-Body {
+.parallax-container {
     position: relative;
-    border-top: 1px solid rgba(15,70,100,.12);
-    border-bottom: 1px solid rgba(15,70,100,.12);
+    overflow: hidden;
+    height: 350px;
 }
