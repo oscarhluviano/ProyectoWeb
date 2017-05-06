@@ -11,8 +11,9 @@
 		<link rel="stylesheet" href="css/estilos.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+		<script src="js/angular.min.js"></script>
 	</head>
-	<body>
+	<body ng-controller="cursoCtrl as curso">
 		<!--Barra de navegacion-->
 		<header>
 			<ul id="dropdown1" class="dropdown-content">
@@ -61,8 +62,8 @@
 		<!--Modal-->
 		<div id="modal1" class="modal">
 			<div class="modal-content">
-				<h4>NOMBRE CURSO</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque veritatis ullam, veniam labore omnis obcaecati soluta facere impedit dicta suscipit quae ex maxime quod laboriosam! Dolor doloremque ipsa, optio inventore.</p>
+				<h4>{{m.name}}</h4>
+				<p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}} <br>{{m.detalles}}</p>
 			</div>
 			 <div class="modal-footer">
       <a href="files/lorem.pdf" class="modal-action modal-close waves-effect waves-green btn-flat ">Temario</a>
@@ -71,253 +72,17 @@
 		<!--Cards-->
 		<div class="container">
 			<div class="row">
-				<div class="col s12 m4">
+				<div class="col s12 m4" ng-repeat="m in curso.collection | filter : search | orderBy: 'name' : a">
 					<div class="card grey lighten-3">
 						<div class="card-image">
-							<img src="img/arduino.jpg">
+							<img ng-src="{{m.img}}">
 							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
 						</div>
 						<div class="card-content">
-							<span class="card-title">Arduino</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+							<span class="card-title activator">{{m.name}}</span>
+							<div class="card-content activator">
+							<p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}}</p>
 						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/bases.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Bases de datos</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/c++.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">C++</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/php.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">php</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/c.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">C</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/diseñoweb.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">diseño web</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/forense.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Computo forense</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/fortran.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">fortran</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/laravel.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">laravel</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/ios.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">ios</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/java.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">java</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/linux.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">linux</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/matlab.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">matlab</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/pcs.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Mantenimiento y ensamblado de pc´s</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/pthon.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">python</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/csharp.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">C#</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/redes.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">redes de datos</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/rasp.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">raspberry pi</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/ia.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">inteligencia artificial</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card grey lighten-3">
-						<div class="card-image">
-							<img src="img/intro.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">introducción a la programación</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
 						</div>
 					</div>
 				</div>
