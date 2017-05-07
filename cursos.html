@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="myApp">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,12 +7,13 @@
 		<link rel="shortcut icon" type="image/png" href="img/Proteco.png"/>
 		<link rel="stylesheet" href="css/materialize.css">
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="css/estilos.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-	</head>
-	<body>
+		<script src="js/angular.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+	</head >
+	<body ng-controller="cursoCtrl as curso">
 		<!--Barra de navegacion-->
 		<header>
 			<ul id="dropdown1" class="dropdown-content">
@@ -47,14 +48,14 @@
 		<div class="container">
 			<div class="col offset-12 s12 m12">
 				<span class="title">Cursos intersemestrales</span>
+
 			</div>
 			<div class="center">
 				<span class="title">Buscar</span>
 				<div class="container">
-					<div class="input-field">
-						<input id="courseSearch" placeholder="Nombre del curso" data-id="courseSearch" type="text">
-					</div>
+					<input ng-model="search">
 				</div>
+				<p>{{search}}</p>
 			</div>
 		</div>
 		<br>
@@ -68,259 +69,29 @@
 		<!--Cards-->
 		<div class="container">
 			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/arduino.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Arduino</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/bases.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Bases de datos</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/c++.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">C++</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/php.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">php</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/c.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">C</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/diseñoweb.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">diseño web</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/forense.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Computo forense</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/fortran.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">fortran</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/laravel.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">laravel</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/ios.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">ios</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/java.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">java</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/linux.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">linux</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/matlab.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">matlab</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/pcs.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">Mantenimiento y ensamblado de pc´s</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/pthon.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">python</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/csharp.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">C#</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/redes.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">redes de datos</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/rasp.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">raspberry pi</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/ia.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">inteligencia artificial</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m4">
-					<div class="card">
-						<div class="card-image">
-							<img src="img/intro.jpg">
-							<a class="btn-floating halfway-fab waves-effect waves-light red" href="#modal1"><i class="material-icons">add</i></a>
-						</div>
-						<div class="card-content">
-							<span class="card-title">introducción a la programación</span>
-							<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+        <div class="col s12 m3" ng-repeat="m in curso.collection | filter : search | orderBy: 'name' : a">
+          <div class="card" >
+
+            <div class="card-image" >
+              <img ng-src="{{m.img}}">
+              <span class="card-title activator">{{m.name}}</span>
+            </div>
+            <div class="card-content avtivator">
+              <p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}}</p>
+            </div>
+
+            <div class="card-action">
+              <a href="#">Iniciar sesión</a>
+              <a href="#">Temario</a>
+            </div>
+             <div class="card-reveal">
+             <span class="card-title grey-text text-darken-4">Detalles<i class="material-icons right">close</i></span>
+             <p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}} <br>{{m.detalles}}</p>
+    </div>
+          </div>
+        </div>
+      </div>	
 		</div>
-	</div>
 	</main>
 	<!--footer-->
 	<footer class="page-footer  blue-grey lighten-4">
@@ -329,12 +100,6 @@
 				<div class="col l6 s12">
 					<h5 class="indigo-text darken-4">¿QUIÉNES SOMOS?</h5>
 					<p class="blue-text text-darken-4">El Programa de Tecnología en Cómputo busca establecer un proceso permanente, con herramientas de cómputo, para la formación de personal docente y de investigación, en las diferentes áreas de las Divisiones de la Facultad de Ingeniería, mediante la participación de los integrantes en cursos especializados y en el desarrollo de proyectos.</p>
-					<p class="center">
-						<a href="https://www.facebook.com/proteco" target="_blank">Facebook</a> -
-						<a href="https://www.twitter.com/proteco" target="_blank">Twitter</a> -
-						<a href="https://www.instagram.com/protecounam" target="_blank">Instagram</a> -
-						<a href="https://www.youtube.com/channel/UCSEngCSxjHdCDFxK-gzwsxw" target="_blank">Youtube</a>
-					</p>
 				</div>
 				<div class="col l4 offset-l2 s12">
 					<h5 class="indigo-text darken-4">CONTACTO</h5>
@@ -360,8 +125,8 @@
 			</div>
 		</footer>
 	</body>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/app.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/materialize.min.js"></script>
 </html>
