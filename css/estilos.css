@@ -57,34 +57,17 @@ a
 	background-color: #00aced;
 }
 
-.btn-instagram
-{
-	background-color: #8a3ab9;
-}
 
 .btn-youtube
 {
 	background-color: #b31217;
 }
 
-.btn-goomaps
-{
-	background-color: #6F4C46;
-}
 .btn-git
 {
 	background-color: #000000;
 }
 
-.btn-ingresar
-{
-	background-color: #31B404;
-}
-
-.btn-salir
-{
-	background-color: #FA5858;
-}
 
 .btn-ingresar:hover
 {
@@ -110,20 +93,14 @@ a
 	background-color: #86D5FF;
 }
 
-.btn-instagram:hover
-{
-	background-color: #E184FF;
-}
+
 
 .btn-youtube:hover
 {
 	background-color: #FF5A54;
 }
 
-.btn-goomaps:hover
-{
-	background-color: #A67167;
-}
+
 
 .footer-small
 {
@@ -147,23 +124,6 @@ a
 	filter: blur(25px);
 }
 
-.btn-basico
-{
-	background-color: #E9EE00;
-	color: black;
-}
-
-.btn-intermedio
-{
-	background-color: #FAA400;
-	color: black;
-}
-
-.btn-avanzado
-{
-	background-color: #EA6E6C;
-	color: black;
-}
 
 .carousel-img
 {
