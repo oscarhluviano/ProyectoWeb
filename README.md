@@ -6,7 +6,7 @@
 Segundo proyecto realizado para el curso de web ambiade proteco, se debe replicar la pagina oficial de Proteco 
 # Novedades
 * Implementacion de Single Sign On
-* Uso de responsibilidad web con materalize
+* Uso de responsividad web con materalize
 * Elementos de materialize como Carousel, Modals, Parallax, entre otros
 # Modo de Uso
 
@@ -23,7 +23,7 @@ Para la parte de la busqueda de cursos se utilizo [Angular](https://angularjs.or
 * NOTA: para cambiar algun elemento del front se debe modificar cursos.html y/o la carpeta img.
 
 # Pagina
-Para poder ver la pagina terminada acceda a [Proteco](http://ohl.esy.es/).
+Para poder ver la pagina terminada acceda a [PROTECO](http://ohl.esy.es/).
 
 
 
