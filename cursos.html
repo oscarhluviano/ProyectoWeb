@@ -10,7 +10,12 @@
 		<link rel="stylesheet" href="css/estilos.css">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<<<<<<< HEAD
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+=======
+		<script src="js/angular.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+>>>>>>> 14112db9307292aa6dc86ab516662edd1969dc46
 	</head>
 	<body ng-controller="cursoCtrl as curso">
 		<!--Barra de navegacion-->
@@ -47,62 +52,54 @@
 		<div class="container">
 			<div class="col offset-12 s12 m12">
 				<span class="title">Cursos intersemestrales</span>
-
 			</div>
 			<div class="center">
 				<span class="title">Buscar</span>
-				<div class="container">
-					<input ng-model="search">
+				<div  class="container">
+					<input placeholder="Nombre curso" ng-model="search">
 				</div>
 			</div>
 		</div>
 		<br>
-		<!--Modal-->
-		<div id="modal1" class="modal">
-			<div class="modal-content">
-				<h4>{{m.name}}</h4>
-				<p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}} <br>{{m.detalles}}</p>
-			</div>
-			<div class="modal-footer">
-				<a href="files/lorem.pdf" class="modal-action modal-close waves-effect waves-green btn-flat ">Temario</a>
-			</div>
-		</div>
 		<!--Cards-->
 		<div class="container">
 			<div class="row">
-
-        <div class="col s12 m3" ng-repeat="m in curso.collection | filter : search | orderBy: 'name' : a">
-          <div class="card" >
-
-            <div class="card-image" >
-              <img ng-src="{{m.img}}">
-              <span class="card-title activator">{{m.name}}</span>
-            </div>
-            <div class="card-content avtivator">
-              <p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}}</p>
-            </div>
-
-            <div class="card-action">
-              <a href="#">Iniciar sesión</a>
-              <a href="#">Temario</a>
-            </div>
-             <div class="card-reveal">
-             <span class="card-title grey-text text-darken-4">Detalles<i class="material-icons right">close</i></span>
-             <p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}} <br>{{m.detalles}}</p>
-    </div>
-          </div>
-        </div>
-      </div>	
+				<div class="col s12 m4" ng-repeat="m in curso.collection | filter : search | orderBy: 'name' : a">
+					<div class="card">
+						<div class="card-image" >
+							<img ng-src="{{m.img}}">
+							
+						</div>
+						<div class="card-content avtivator">
+							<span class="card-title activator">{{m.name}}</span>
+							<p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}}</p>
+						</div>
+						<div class="card-action">
+							<a href="sesion.html">Iniciar sesión</a>
+							<a href="files/lorem.pdf">Temario</a>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Detalles<i class="material-icons right">close</i></span>
+							<p>Fecha: {{m.fecha}} <br> Horario: {{m.horario}} <br>{{m.detalles}}</p>
+						</div>
+					</div>
+				</div>
 			</div>
-
-	</main>
-	<!--footer-->
+		</div>
+		</main>
+		<!--footer-->
 	<footer class="page-footer  blue-grey lighten-4">
 		<div class="container">
 			<div class="row">
 				<div class="col l6 s12">
 					<h5 class="indigo-text darken-4">¿QUIÉNES SOMOS?</h5>
 					<p class="blue-text text-darken-4">El Programa de Tecnología en Cómputo busca establecer un proceso permanente, con herramientas de cómputo, para la formación de personal docente y de investigación, en las diferentes áreas de las Divisiones de la Facultad de Ingeniería, mediante la participación de los integrantes en cursos especializados y en el desarrollo de proyectos.</p>
+					<p class="center">
+						<a href="https://www.facebook.com/proteco" target="_blank">Facebook</a> -
+						<a href="https://www.twitter.com/proteco" target="_blank">Twitter</a> -
+						<a href="https://www.instagram.com/protecounam" target="_blank">Instagram</a> -
+						<a href="https://www.youtube.com/channel/UCSEngCSxjHdCDFxK-gzwsxw" target="_blank">Youtube</a>
+					</p>
 				</div>
 				<div class="col l4 offset-l2 s12">
 					<h5 class="indigo-text darken-4">CONTACTO</h5>
@@ -118,7 +115,6 @@
 					</p>
 					<p>
 						<span class="ptc-text">Correo electrónico:</span> cursosproteco@gmail.com
-						</p>
 					</div>
 				</div>
 			</div>
@@ -134,5 +130,5 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/materialize.min.js"></script>
-
+	<script src="js/app.js"></script>
 </html>
